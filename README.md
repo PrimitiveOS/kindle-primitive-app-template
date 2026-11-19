@@ -2,7 +2,7 @@
 
 # Hello
 
-**A starting point for a native Primitive Kindle app.**
+**A starting point for a native PrimitiveOS app.**
 
 [**Install guide**](INSTALL.md) · [**Device notes**](docs/device-notes.md) · [**Changelog**](CHANGELOG.md)
 
@@ -32,9 +32,8 @@ Hello pairs a small saved counter with a desktop component gallery. Use it to se
 
 ## Quick start
 
-1. Find the local ARMHF package and USB installation steps in the [install guide](INSTALL.md).
-2. Extract the package, copy the `hello` and `documents` folders to your jailbroken Kindle’s user storage, and eject it.
-3. Open Hello from Primitive Launcher. **Done** returns to the launcher grid.
+After setting up PrimitiveOS, open **Store** from Primitive Launcher. Choose **Hello** under **Apps**,
+tap **Get**, and open it from the Launcher grid. The [install guide](INSTALL.md) also covers local USB testing.
 
 ## Develop locally
 
