@@ -1,0 +1,11 @@
+[package]
+name = "hello-desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+hello-core.workspace = true
+hello-render.workspace = true
+primitive-app.workspace = true
+primitive-ui.workspace = true
