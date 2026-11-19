@@ -13,7 +13,7 @@ pub struct View {
 impl App for View {
     fn draw(&self, canvas: &mut Canvas) {
         let width = canvas.bounds().w;
-        header(canvas, "Primitive Hello", "Done");
+        header(canvas, "Hello", "Done");
         canvas.text(screen_rect(width, 40, 470, 1184, 140), "Hello, Kindle", TextStyle::new(78).bold().center());
         canvas.text(screen_rect(width, 40, 620, 1184, 70), &format!("Greetings sent: {}", self.hello.count()), CAPTION.center());
         canvas.button(screen_rect(width, 412, 795, 440, 100), "Say hello", true, false);

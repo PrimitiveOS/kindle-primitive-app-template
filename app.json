@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "primitive-hello",
   "dir": "hello",
-  "name": "Primitive Hello",
+  "name": "Hello",
   "subtitle": "A native Kindle example",
   "developer": { "name": "Primitive AI" },
   "categories": ["utilities"],

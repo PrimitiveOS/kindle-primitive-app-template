@@ -1,6 +1,6 @@
 <div align="center">
 
-# Primitive app template
+# Hello
 
 **A starting point for a native Primitive Kindle app.**
 
@@ -10,13 +10,13 @@
 
 ---
 
-Primitive Hello pairs a small saved counter with a desktop component gallery. Use it to see how native apps share Launcher’s drawing, keyboard, input, rotation, and sleep handling.
+Hello pairs a small saved counter with a desktop component gallery. Use it to see how native apps share Launcher’s drawing, keyboard, input, rotation, and sleep handling.
 
 ## Screenshots
 
 <table>
 <tr>
-<td align="center"><img src="docs/images/hello.png" width="260" alt="Primitive Hello and its counter in light mode"><br><sub>Run the native app example</sub></td>
+<td align="center"><img src="docs/images/hello.png" width="260" alt="Hello and its counter in light mode"><br><sub>Run the native app example</sub></td>
 <td align="center"><img src="docs/images/components.png" width="260" alt="Shared settings rows, switches, and navigation controls"><br><sub>Explore the shared controls</sub></td>
 <td align="center"><img src="docs/images/components-sheet-dark.png" width="260" alt="Downloads modal sheet in the dark component gallery"><br><sub>Inspect a modal sheet in dark mode</sub></td>
 </tr>
@@ -34,7 +34,7 @@ Primitive Hello pairs a small saved counter with a desktop component gallery. Us
 
 1. Find the local ARMHF package and USB installation steps in the [install guide](INSTALL.md).
 2. Extract the package, copy the `hello` and `documents` folders to your jailbroken Kindle’s user storage, and eject it.
-3. Open Primitive Hello from Primitive Launcher. **Done** returns to the launcher grid.
+3. Open Hello from Primitive Launcher. **Done** returns to the launcher grid.
 
 ## Develop locally
 
