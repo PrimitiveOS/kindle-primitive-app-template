@@ -1,6 +1,6 @@
 use primitive_ui::{
-    full_screen_message, header, icons, progress, section_header, Canvas, GrayImage, Layer, Pager,
-    Rect, Row, RowAccessory, Rows, Sheet, Status, Tab, TabBar, TextStyle, CAPTION, TITLE,
+    full_screen_message, header, icons, progress, section_header, Canvas, Editor, GrayImage, Layer,
+    Pager, Rect, Row, RowAccessory, Rows, Sheet, Status, Tab, TabBar, TextStyle, CAPTION, TITLE,
 };
 
 const ROWS: Rect = Rect::new(40, 530, 1184, 360);
@@ -130,13 +130,15 @@ pub fn install_progress(canvas: &mut Canvas, dark: bool) -> Vec<u8> {
 
 pub fn keyboard(canvas: &mut Canvas, dark: bool) -> Vec<u8> {
     canvas.begin();
-    header(canvas, "Keyboard", "Done");
-    canvas.card(Rect::new(40, 235, 1184, 130));
-    canvas.text(
-        Rect::new(69, 273, 1126, 65),
-        "Write on a Kindle",
-        TextStyle::new(43),
-    );
+    header(canvas, "Text input", "Done");
+    let mut editor = Editor::new(64);
+    editor.text = "Write on a Kindle".chars().collect();
+    editor.caret = 10;
+    section_header(canvas, Rect::new(40, 230, 1184, 50), "Single line");
+    canvas.single_line_field(Rect::new(40, 290, 1184, 100), &editor, "Enter text", false);
+    editor.caret = editor.text.len();
+    section_header(canvas, Rect::new(40, 450, 1184, 50), "Masked input");
+    canvas.single_line_field(Rect::new(40, 510, 1184, 100), &editor, "Enter text", true);
     canvas.keyboard(Layer::Lower, "Done", None);
     canvas.finish(dark)
 }

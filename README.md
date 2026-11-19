@@ -12,6 +12,11 @@ The four crates hold app logic, drawing and hit testing, the Kindle entry point,
 script copies the program to temporary storage. Run `scripts/stage.sh TARGET` after building the Kindle executable, and
 package the stage with `doannt-kindle-build/scripts/package.py`.
 
+The `# PrimitiveUSBLease` library header lets a supported Launcher offer USB drive mode while this app is idle.
+Keep permanent data in the app folder. Finish reads and writes inside `primitive_app::with_storage` and return owned
+data. The shared `primitive_app::save` already uses this protection. Use `App::storage_returned` when the app needs
+to reload files edited from a computer.
+
 Native apps inherit display preferences from Launcher. To override them for one app, add a `settings.txt` file in
 that app's folder on user storage. Supported values are `dark_mode=on|off`, `auto_rotation=on|off`, and
 `rotation=upright|upside-down`. The rotation value is used as the fixed orientation when auto-rotation is off.
