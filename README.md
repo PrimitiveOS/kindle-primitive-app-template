@@ -45,7 +45,9 @@ cargo test --offline --locked --workspace
 cargo run --offline --locked -p hello-desktop
 ```
 
-The desktop target writes previews to `build/previews/`. The desktop simulation verifies the saved counter and renders the component gallery. Physical Kindle testing is pending. See the [device notes](docs/device-notes.md) for the verification checklist.
+The desktop target writes previews to `build/previews/`. The desktop simulation verifies the saved counter and renders
+the component gallery. On an ARMHF Kindle Oasis 3 running firmware 5.18.2, Hello opened from Launcher, incremented
+its sample counter once, and returned to Launcher. See the [device notes](docs/device-notes.md) for the verification checklist.
 
 ## Use the template
 
