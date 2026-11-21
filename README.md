@@ -46,6 +46,10 @@ tap **Get**, and open it from the Launcher grid. The [install guide](INSTALL.md)
 - **Display modes.** Capture light, dark, and upside-down frames. The desktop preview checks that pressing a row changes only its own refresh rectangle.
 - **Native lifecycle.** Exercise sleep, wake, the launcher’s redraw request, exit, and the counter’s on-disk persistence.
 
+## Build your own app
+
+Start from this template, then read [docs/CONVENTIONS.md](docs/CONVENTIONS.md): the kit's `App` trait, the tap-feedback rule (every tappable control reverses black and white while it is held), dark mode and icons, tests, versions and the Store listing. `scripts/new-app.py` makes a new app folder from this template.
+
 ## Develop locally
 
 Keep `doannt-kindle-tools` and `doannt-kindle-launcher` beside this checkout, then run the following from this repo.

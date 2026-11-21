@@ -104,6 +104,17 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         &for_panel(controls, Rotation::UpsideDown, 0),
     )?;
 
+    // The template's own custom control: held, it reverses, and only its rectangle changes.
+    let toggle = Rect::new(40, 1000, 1184, 100);
+    let plain_toggle = gallery::controls(&mut canvas, false, None);
+    assert!(canvas.press_at((toggle.x + 40) as f32, (toggle.y + 40) as f32), "the custom toggle is a tap target");
+    let held_toggle = gallery::controls(&mut canvas, false, None);
+    canvas.clear_press();
+    let (x, y, width, height) =
+        changed_rect(&plain_toggle, &held_toggle, WIDTH as usize).expect("holding the toggle changes pixels");
+    assert!(x >= toggle.x as usize && x + width <= toggle.right() as usize);
+    assert!(y >= toggle.y as usize && y + height <= toggle.bottom() as usize);
+
     let keyboard = gallery::keyboard(&mut canvas, false);
     let layout = Layout::new(WIDTH, HEIGHT, 4, 5);
     let (_, letter) = layout
