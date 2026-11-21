@@ -31,6 +31,8 @@ pub fn controls(canvas: &mut Canvas, dark: bool, pressed: Option<usize>) -> Vec<
     Rows {
         bounds: ROWS,
         rows: &[
+            // A sample switch row. On the Kindle, an app under Primitive Launcher has no dark mode switch of its own:
+            // the theme is the system's.
             Row {
                 title: "Dark mode",
                 detail: Some("White text on a dark background"),

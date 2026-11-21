@@ -3,7 +3,12 @@
 # Author: Primitive AI
 # DontUseFBInk
 # PrimitiveUSBLease
+# Wake: redraw
 
+# "# Wake: redraw" above (keep it in the first ten lines) tells Primitive Launcher that the app redraws on SIGUSR1.
+# Under the launcher this script ignores the signal (a shell ends on it otherwise); the app sets its own handler
+# (primitive_app::run).
+[ "${PRIMITIVE_LAUNCHER:-0}" = 1 ] && trap '' USR1
 app=/mnt/us/hello/bin/hello-kindle
 [ -x "$app" ] || exit 1
 if [ -n "${KL_NATIVE_APP_RUN:-}" ]; then
