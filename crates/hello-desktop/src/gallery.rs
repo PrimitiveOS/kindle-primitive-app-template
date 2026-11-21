@@ -52,6 +52,9 @@ pub fn controls(canvas: &mut Canvas, dark: bool, pressed: Option<usize>) -> Vec<
     }
     .draw(canvas, pressed);
 
+    section_header(canvas, Rect::new(40, 930, 1184, 56), "Custom control");
+    hello_render::custom_toggle(canvas, Rect::new(40, 1000, 1184, 100), dark);
+
     Pager {
         bounds: Rect::new(40, 1290, 1184, 100),
         page: 1,
