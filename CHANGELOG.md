@@ -1,6 +1,6 @@
 # Changes
 
-## 0.1.1
+## 0.1.2
 
 - The library entry declares `# Wake: redraw`, so the launcher asks the app to redraw after sleep and theme changes.
 - Adds `docs/CONVENTIONS.md`: the app kit, the tap-feedback rule, dark mode and icons, tests, versions and the Store listing.
